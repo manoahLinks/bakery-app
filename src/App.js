@@ -1,15 +1,17 @@
-import React, {Component } from 'react';
+import React, {Component} from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import NewTemplate from './New';
+import Sidebar from './Sidebar';
 
 class App extends Component {
   render() {
     return (
       <Router>
           <div className='grid'>
-              <Switch>
-                  <NewTemplate />
-              </Switch>
+            <div className="flex flex-row font-nunito">
+              <Sidebar />
+              <NewTemplate />
+            </div>
           </div>
       </Router>
     );

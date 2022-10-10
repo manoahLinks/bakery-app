@@ -1,127 +1,90 @@
-import { useState } from "react";
+import React, {useState, useEffect} from "react";
 
 const NewTemplate = () => {
-    const [open, setOpen] = useState(true)
+    return (  
+        <main className="flex text-2xl flex-1 h-screen text-gray-700">
+            <div className="basis-3/4 bg-gray-100 flex flex-col grow">
+                <div className="flex-1 grid md:grid-cols-2 md:justify-evenly bg-gray-100">
+                    <div className="bg-gray-200 basis-3/12 md:m-2 m-2 rounded shadow-md flex p-2">
+                        <div>
+                            {<img className="" src={require(`./assets/salesman-indicating-sales-growth.png`)} alt="" />}
+                        </div>
+                        <div className="flex flex-col justify-evenly">
+                            <p className="text-sm text-semibold">Check out today's sales achivements</p>
+                            <button className="text-sm bg-green-500 text-white rounded shadow p-1 hover:shadow-md hover:bg-green-400">Click Here</button>
+                        </div>
+                    </div>
+                    <div className="bg-gray-200 basis-3/12 md:m-2 m-2 rounded shadow-md"></div>
+                    <div className="flex bg-gray-200 basis-3/12 md:m-2 m-2 rounded shadow-md text-xs text-center p-2">
+                        <div className="m-2 p-2 items-center">
+                            <div className=" flex justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
+                                </svg>
+                            </div>
+                            <div className="border-b border-zinc-500 py-2">Production Target</div>
+                            <div className="py-2">Choco <span className="font-semibold">21</span> bags</div>
+                        </div>
+                        <div className="m-2 p-2 text-center flex-col">
+                            <div className="flex justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3" />
+                                </svg>
+                            </div>
+                            <div className="border-b border-blue-500 py-2">Current Production</div>
+                            <div className="py-2">Choco <span className="font-semibold">15</span> bags</div>
+                        </div>
+                            <span className="self-center justify-end">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                </svg>
+                            </span>
+                    </div>
 
-    const menus = [
-        {id:1, title:"Dashboard", src:"dashboard"},
-        {id:2, title:"Inbox", src:"inbox", gap:true},
-        {id:3, title:"Account", src:"user"},
-        {id:4, title:"My Tasks", src:"calender"},
-        {id:5, title:"Analytics", src:"analytics", gap: true},
-        {id:6, title:"Reports", src:"file"},
-        {id:7, title:"Setting", src:"setting"}
-    ]
-
-    return ( 
-        <div className="flex flex-row font-nunito">
-            <div className={`${open ? "w-72" : "w-20" } pt-8 h-screen bg-gray-200 duration-300 relative inlin`}>
-                <span className={`absolute cursor-pointer w-7 top-9 rounded-full border-2 border-white text-white -right-3 bg-gray-600`}
-                      onClick={()=>{setOpen(!open)}}  
-                    >
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class={`w-6 h-6  ${!open && "rotate-180"}`}>
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M18.75 19.5l-7.5-7.5 7.5-7.5m-6 15L5.25 12l7.5-7.5" />
-                    </svg>
-                </span>
-                
-                <div className="flex gap-x-4 items-center">
-                    <img src={require(`./assets/dashboard-apps.png`)} className={`cursor-pointer duration-300`} />
-                    <h1 className={`text-gray-700 origin-left font-medium text-xl duration-300 text-bold ${!open && "scale-0"}`}>JJB FOODS</h1>
+                    <div className="flex justify-evenly bg-gray-200 basis-3/12 md:m-2 m-2 rounded shadow-md text-xs text-center p-2">
+                        <div className="m-2 p-2 items-center flex-col">
+                            <div className="flex justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m0 0l6.75-6.75M12 19.5l-6.75-6.75" />
+                                </svg>
+                            </div>
+                            <div className="border-b border-yellow-500 py-2">Loafs Recieved</div>
+                            <div className="py-2">8,978 loafs</div>
+                        </div>
+                        <div className="m-2 p-2 text-center flex-col">
+                            <div className="flex justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 19.5v-15m0 0l-6.75 6.75M12 4.5l6.75 6.75" />
+                                </svg>
+                            </div>
+                            <div className="border-b border-green-500 py-2">Loafs dispatched</div>
+                            <div className="py-2">7,000 loafs</div>
+                        </div>
+                            <span className="self-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                </svg>
+                            </span>
+                    </div>
                 </div>
-                {<ul className="pt-6">
-                    {menus.map((menu)=>(
-                        <li key={menu.id} className={`text-gray-700 text-sm flex items-center gap-x-4 rounded-md cursor-pointer p-4 hover:bg-gray-100 hover:font-semibold hover:text-gray-500 ${menu.gap ? "mt-9" : "mt-2"}`}>
-                            {<img className="w-6" src={require(`./assets/${menu.src}.png`)} alt="" />}
-                            <span className={`${!open && "hidden"} origin-left duration-200`}>{menu.title}</span>   
-                        </li>
-                    ))}
-                </ul>}
-
+                <div className="flex-1 flex bg-gray-300 md:m-2 m-2 shadow-md ">
+                        
+                </div>
             </div>
-            <main className="flex text-2xl flex-1 h-screen text-gray-700">
-                <div className="basis-3/4 bg-gray-100 flex flex-col grow">
-                    <div className="flex-1 grid md:grid-cols-2 md:justify-evenly bg-gray-100">
-                        <div className="bg-gray-200 basis-3/12 md:m-2 m-2 rounded shadow-md flex p-2">
-                            <div>
-                                {<img className="" src={require(`./assets/salesman-indicating-sales-growth.png`)} alt="" />}
-                            </div>
-                            <div className="flex flex-col justify-evenly">
-                                <p className="text-sm text-semibold">Check out today's sales achivements</p>
-                                <button className="text-sm bg-green-500 text-white rounded shadow p-1 hover:shadow-md hover:bg-green-400">Click Here</button>
-                            </div>
-                        </div>
-                        <div className="bg-gray-200 basis-3/12 md:m-2 m-2 rounded shadow-md"></div>
-                        <div className="flex bg-gray-200 basis-3/12 md:m-2 m-2 rounded shadow-md text-xs text-center p-2">
-                            <div className="m-2 p-2 items-center">
-                                <div className=" flex justify-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
-                                    </svg>
-                                </div>
-                                <div className="border-b border-zinc-500 py-2">Production Target</div>
-                                <div className="py-2">Choco <span className="font-semibold">21</span> bags</div>
-                            </div>
-                            <div className="m-2 p-2 text-center flex-col">
-                                <div className="flex justify-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3" />
-                                    </svg>
-                                </div>
-                                <div className="border-b border-blue-500 py-2">Current Production</div>
-                                <div className="py-2">Choco <span className="font-semibold">15</span> bags</div>
-                            </div>
-                                <span className="self-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                                    </svg>
-                                </span>
-                        </div>
+            <div className="basis-1/4 bg-gray-100 flex flex-col md:block hidden">
+                <div className="flex-1 flex bg-gray-200">
 
-                        <div className="flex justify-evenly bg-gray-200 basis-3/12 md:m-2 m-2 rounded shadow-md text-xs text-center p-2">
-                            <div className="m-2 p-2 items-center flex-col">
-                                <div className="flex justify-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m0 0l6.75-6.75M12 19.5l-6.75-6.75" />
-                                    </svg>
-                                </div>
-                                <div className="border-b border-yellow-500 py-2">Loafs Recieved</div>
-                                <div className="py-2">8,978 loafs</div>
-                            </div>
-                            <div className="m-2 p-2 text-center flex-col">
-                                <div className="flex justify-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 19.5v-15m0 0l-6.75 6.75M12 4.5l6.75 6.75" />
-                                    </svg>
-                                </div>
-                                <div className="border-b border-green-500 py-2">Loafs dispatched</div>
-                                <div className="py-2">7,000 loafs</div>
-                            </div>
-                                <span className="self-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                                    </svg>
-                                </span>
-                        </div>
-                    </div>
-                    <div className="flex-1 flex bg-gray-300 md:m-2 m-2 shadow-md ">
-                        
-                            
-                    </div>
                 </div>
-                <div className="basis-1/4 bg-gray-100 flex flex-col md:block hidden">
-                    <div className="flex-1 flex bg-gray-200">
+                <div className="flex-1 flex bg-gray-300">
+                    
 
-                    </div>
-                    <div className="flex-1 flex bg-gray-300">
-                        
-
-                    </div>
-                    <div className="flex-1 flex bg-gray-900">
-
-                    </div>
                 </div>
-            </main>
-        </div>
+                <div className="flex-1 flex bg-gray-900">
+
+                </div>
+            </div>
+            
+        </main>
      );
 };
  
