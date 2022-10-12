@@ -1,4 +1,6 @@
 import React, {useState, useEffect} from "react";
+import Table from "./Table";
+import Tablegrid from "./Tablegrid"
 
 const NewTemplate = () => {
     return (  
@@ -15,7 +17,7 @@ const NewTemplate = () => {
                         </div>
                     </div>
                     <div className="bg-gray-200 basis-3/12 md:m-2 m-2 rounded shadow-md"></div>
-                    <div className="flex bg-gray-200 basis-3/12 md:m-2 m-2 rounded shadow-md text-xs text-center p-2">
+                    <div className="flex bg-gray-200 basis-3/12 justify-evenly md:m-2 m-2 rounded shadow-md text-xs text-center p-2">
                         <div className="m-2 p-2 items-center">
                             <div className=" flex justify-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -67,8 +69,9 @@ const NewTemplate = () => {
                             </span>
                     </div>
                 </div>
-                <div className="flex-1 flex bg-gray-300 md:m-2 m-2 shadow-md ">
-                        
+                <div className="flex-1 flex bg-gray-100 m-2 shadow-md justify-center w-full rounded">
+                    <Table></Table>
+                    <Tablegrid></Tablegrid>            
                 </div>
             </div>
             <div className="basis-1/4 bg-gray-100 flex flex-col md:block hidden">

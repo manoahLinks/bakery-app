@@ -7,7 +7,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-          <div className='grid'>
+          <div className='grid w-full'>
             <div className="flex flex-row font-nunito">
               <Sidebar />
               <NewTemplate />
