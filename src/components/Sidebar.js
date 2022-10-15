@@ -31,13 +31,13 @@ const Sidebar = () => {
                 </span>
                 
                 <div className="flex gap-x-4 items-center">
-                    <img src={require(`./assets/dashboard-apps.png`)} className={`cursor-pointer duration-300`} />
+                    <img src={require(`../assets/dashboard-apps.png`)} className={`cursor-pointer duration-300`} />
                     <h1 className={`text-gray-700 origin-left font-medium text-xl duration-300 text-bold ${!open && "scale-0"}`}>JJB FOODS</h1>
                 </div>
                 {<ul className="pt-6">
                     {menus.map((menu)=>(
                         <li key={menu.id} onClick={clicked} className={`text-gray-700 text-sm flex items-center gap-x-4 rounded-md cursor-pointer p-4 hover:bg-gray-100 hover:font-semibold hover:text-gray-500 ${menu.gap ? "mt-9" : "mt-2"}`}>
-                            {<img className="w-6" src={require(`./assets/${menu.src}.png`)} alt="" />}
+                            {<img className="w-6" src={require(`../assets/${menu.src}.png`)} alt="" />}
                             <span className={`${!open && "hidden"} origin-left duration-200`}>{menu.title}</span>   
                         </li>
                     ))}

@@ -74,9 +74,9 @@ const Taskform = () => {
                 />
             </div>
             
-            <div className="bg-white p-5 flex justify-between rounded ">
+            <div className="bg-white p-5 flex justify-between rounded items-center ">
                 <span>Priority</span>
-                <div className="space-x-2">
+                <div className="space-x-2 flex">
                     <span className="bg-green-200 p-3 rounded space-x-2">
                         <label>Low</label>
                         <input type="radio" />

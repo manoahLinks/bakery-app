@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
-import NewTemplate from './New';
-import Sidebar from './Sidebar';
+import NewTemplate from './pages/Home';
+import Sidebar from './components/Sidebar';
 
 class App extends Component {
   render() {

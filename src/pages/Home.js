@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
-import Table from "./Table";
-import Tablegrid from "./Tablegrid"
+import Table from "../components/Table";
+import Tablegrid from "../components/Tablegrid"
 
 const NewTemplate = () => {
     return (  
@@ -9,7 +9,7 @@ const NewTemplate = () => {
                 <div className="flex-1 grid md:grid-cols-2 md:justify-evenly bg-gray-100">
                     <div className="bg-gray-200 basis-3/12 md:m-2 m-2 rounded shadow-md flex p-2">
                         <div>
-                            {<img className="" src={require(`./assets/salesman-indicating-sales-growth.png`)} alt="" />}
+                            {<img className="" src={require(`../assets/salesman-indicating-sales-growth.png`)} alt="" />}
                         </div>
                         <div className="flex flex-col justify-evenly">
                             <p className="text-sm text-semibold">Check out today's sales achivements</p>
