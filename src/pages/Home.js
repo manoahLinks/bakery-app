@@ -74,16 +74,20 @@ const NewTemplate = () => {
                     <Tablegrid></Tablegrid>            
                 </div>
             </div>
-            <div className="basis-1/4 bg-gray-100 flex flex-col md:block hidden">
-                <div className="flex-1 flex bg-gray-200">
-
+            <div className="basis-1/4 bg-gray-100 flex flex-col align-evenly md:block hidden h-screen">
+                <div className="h-1/3 flex-1 flex flex-col bg-gray-200 m-2 border-2 text-sm rounded shadow items-center">
+                    <img className="w-6/12 rounded-full h-2/4" src={require('../assets/IMG_20220218_180539.jpg')} alt="" />
+                    <div className="mt-2">
+                        <span>@karenJohnson</span>
+                    </div>
                 </div>
-                <div className="flex-1 flex bg-gray-300">
-                    
-
+                <div className="h-1/3 flex-1 flex flex-col m-2 bg-gray-300 text-sm rounded shadow">
+                   
                 </div>
-                <div className="flex-1 flex bg-gray-900">
-
+                <div className="h-1/3 flex-1 flex flex-col justify-around p-2 m-2 bg-gray-400 rounded shadow">
+                    <input type="range" name="" id="" />
+                    <input type="range" name="" id="" />
+                    <input type="range" name="" id="" />
                 </div>
             </div>
             
