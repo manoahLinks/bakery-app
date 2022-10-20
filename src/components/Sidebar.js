@@ -36,7 +36,7 @@ const Sidebar = () => {
                 </div>
                 {<ul className="pt-6">
                     {menus.map((menu)=>(
-                        <li key={menu.id} onClick={clicked} className={`text-gray-700 text-xl flex items-center gap-x-4 cursor-pointer p-4 hover:bg-gray-100 font-semibold text-gray-500 ${menu.gap ? "mt-9" : "mt-2"}`}>
+                        <li key={menu.id} onClick={clicked} className={`text-gray-700 text-xl flex items-center gap-x-4 cursor-pointer p-4 hover:bg-green-200`}>
                             {<img className="w-6" src={require(`../assets/${menu.src}.png`)} alt="" />}
                             <span className={`${!open && "hidden"} origin-left duration-200`}>{menu.title}</span>   
                         </li>

@@ -2,20 +2,20 @@ import { useState } from "react";
 
 const Taskform = () => {
 
-    const   [taskName, setTaskName]               = useState(''),
-            [taskDescription, setTaskDescription] = useState(''),
-            [dueDate, setDueDate]                 = useState(''),
-            [dueTime, setDueTime]                 = useState(''),
+    const   [taskName, setTaskName]               = useState(null),
+            [taskDescription, setTaskDescription] = useState(null),
+            [dueDate, setDueDate]                 = useState(null),
+            [dueTime, setDueTime]                 = useState(null),
             [error, setError]                     = useState(null)
 
     const handleSubmit = async (e) => {
         e.preventDefault()
 
-        const task = {taskName, taskDescription, dueDate, dueTime}
+        const task = {taskName, taskDescription, dueDate, dueTime, }
 
         console.log(task)
 
-        const response = await fetch('', {
+        const response = await fetch('http://localhost:8002/tasks', {
             method: 'POST',
             body: JSON.stringify(task),
             headers: {
@@ -28,10 +28,10 @@ const Taskform = () => {
             setError(error.message)
         }
         if(response.ok){
-            setTaskName('')
-            setTaskDescription('')
-            setDueDate('')
-            setDueTime('')
+            setTaskName(null)
+            setTaskDescription(null)
+            setDueDate(null)
+            setDueTime(null)
             setError(null)
             console.log('new Workout added', json )
         }
@@ -95,7 +95,7 @@ const Taskform = () => {
                 </div>
             </div>
             <div className="mt-5">
-                <button className="bg-green-500 px-6 py-2 text-gray-200 hover:bg-green-400">Create Task</button>
+                <button className="border border-green-500 px-6 py-2 text-green-500 font-semibold shadow bg-white">Create Task</button>
             </div>
         </form>
      );

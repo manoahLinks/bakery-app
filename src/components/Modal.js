@@ -1,7 +1,10 @@
 import Taskform from "./Taskform"
 import Tasksummary from "./Tasksummary"
+import useFetch from "../useFetch"
 
 const Modal = ({setModalOn, setChoice}) => {
+
+    const {result, isPending, error} = useFetch('http://localhost:8002/users')
 
     const handleOkClick = ()=>{
         setModalOn(true)
@@ -28,7 +31,8 @@ const Modal = ({setModalOn, setChoice}) => {
                         <Taskform></Taskform>
                     </div>
                     <div className="bg-white flex-1 basis-1/4 px-6 py-6">
-                        <Tasksummary></Tasksummary>
+                        {isPending && <div>Loading...</div>}
+                        {result && <Tasksummary users = {result} />}
                     </div>
 
                 </div>

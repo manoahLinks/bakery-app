@@ -24,7 +24,7 @@ const useFetch = (url) => {
                     setIsPending(false)
                     setError(err.message)
                 })    
-        }, 1500)
+        }, 1000)
         
     }, [url])
     

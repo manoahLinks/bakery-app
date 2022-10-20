@@ -1,24 +1,51 @@
-{    
-    "blogs":
-    [   
-        {"id": 1, "title": "welcome to kansas", "body": "How many times have you been to the US ...", "author": "Manoah"},    
-        {"id": 2, "title": "Become a true christian", "body": "Christianity has its ethics, its not just going to church ...", "author": "Paul"},
-        {"id": 3, "title": "Football my hobby !", "body": "Football is kinda fun, but the injuries associated with it, is he wahala ...", "author": "Reuben"},
-        {"id": 4, "title": "Talk about life", "body": "Life is meaningless without family, there are alot of cons attached to beign human ....", "author": "Reuben"}
-    ],
-    
-    "users": 
-    [
-
-        {"id": 1, "name": "Manoah", "email": "manoahluka@gmail.com", "password": "pass1234"},
-        {"id": 2, "name": "Noah", "email": "manoah@gmail.com", "password": "pass1234"},
-        {"id": 3, "name": "Manchi", "email": "luka@gmail.com", "password": "pass1234"}
-    ],
-    "products":
-    [
-        {"id": 1, "name": "slice", "quantity":50, "price": 400},
-        {"id": 2, "name": "choco", "quantity":80, "price": 500},
-        {"id": 3, "name": "flat", "quantity":30, "price": 700},
-        {"id": 4, "name": "mini", "quantity":30, "price": 700}
-    ]
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Manoah",
+      "email": "manoahluka@gmail.com",
+      "department": "marketing",
+      "password": "pass1234"
+    },
+    {
+      "id": 2,
+      "name": "Noah",
+      "email": "manoah@gmail.com",
+      "department": "sales",
+      "password": "pass1234"
+    },
+    {
+      "id": 3,
+      "name": "Manchi",
+      "email": "luka@gmail.com",
+      "department": "store",
+      "password": "pass1234"
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "taskName": "General cleaning",
+      "taskDescription": "cleaning of all office premises by staff",
+      "dueTime": "08:07",
+      "dueDate": "2022-10-28",
+      "priority": "high",
+      "status": "on progress",
+      "participants": 9
+    },
+    {
+      "taskName": "record keeping",
+      "taskDescription": "ensure all records are upto date",
+      "dueDate": "2022-10-22",
+      "dueTime": "10:05",
+      "id": 2
+    },
+    {
+      "taskName": "Music Rehersals",
+      "taskDescription": "practice 50 songs ",
+      "dueDate": "2022-10-29",
+      "dueTime": "12:16",
+      "id": 3
+    }
+  ]
 }
