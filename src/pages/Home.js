@@ -74,14 +74,14 @@ const NewTemplate = () => {
                     </div>
                 </div>
                 <div className="flex-1 flex bg-gray-100 m-2 shadow-md w-full rounded">
-                    {isPending && <div>Loading...</div>}
+                    {isPending && <div className="text-sm text-yellow-800">Loading...</div>}
                     {result &&  <Table  tasks = {result} />}
                     <Tablegrid></Tablegrid>            
                 </div>
             </div>
             <div className="basis-1/4 bg-gray-100 flex flex-col align-evenly md:block hidden h-screen">
                 <div className="h-1/3 flex-1 flex flex-col bg-gray-200 m-2 border-2 text-sm rounded shadow items-center">
-                    <img className="w-3/12 m-2" src={require('../assets/IMG_20220218_180539.jpg')} alt="" />
+                    <img className="w-3/12 m-2 object-cover" src={require('../assets/IMG_20220218_180539.jpg')} alt="" />
                     <div className="mt-2">
                         <span>@karenJohnson</span>
                     </div>
@@ -92,7 +92,7 @@ const NewTemplate = () => {
                 <div className="h-1/3 flex-1 flex flex-col justify-around p-2 m-2 bg-gray-300 rounded shadow">
                     <div className="flex flex-col">
                         <h4 className="text-sm">Sales target</h4>
-                        <input className="" type="range" name="" id="" />
+                        <input min={5} max={20} className="w-full" type="range" name="" id="" />
                     </div>
 
                     <div className="flex flex-col">

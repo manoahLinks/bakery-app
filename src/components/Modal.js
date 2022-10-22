@@ -30,7 +30,7 @@ const Modal = ({setModalOn, setChoice}) => {
                     <div className="bg-gray-300 flex-1 basis-3/4 flex items-center justify-center p-6">
                         <Taskform></Taskform>
                     </div>
-                    <div className="bg-white flex-1 basis-1/4 px-6 py-6">
+                    <div className="bg-white flex-1 basis-1/4 px-2 py-2">
                         {isPending && <div>Loading...</div>}
                         {result && <Tasksummary users = {result} />}
                     </div>
