@@ -11,7 +11,7 @@ const Taskform = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
 
-        const task = {taskName, taskDescription, dueDate, dueTime, }
+        const task = {taskName, taskDescription, dueDate, dueTime }
 
         console.log(task)
 

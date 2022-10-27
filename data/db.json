@@ -30,7 +30,7 @@
       "dueTime": "08:07",
       "dueDate": "2022-10-28",
       "priority": "high",
-      "status": "on progress",
+      "status": "In progress",
       "participants": 9
     },
     {
@@ -38,6 +38,9 @@
       "taskDescription": "ensure all records are upto date",
       "dueDate": "2022-10-22",
       "dueTime": "10:05",
+      "priority": "low",
+      "status": "almost completed",
+      "participants": 12,
       "id": 2
     },
     {
@@ -45,6 +48,9 @@
       "taskDescription": "practice 50 songs ",
       "dueDate": "2022-10-29",
       "dueTime": "12:16",
+      "priority": "medium",
+      "status": "completed",
+      "participants": 6,
       "id": 3
     }
   ]

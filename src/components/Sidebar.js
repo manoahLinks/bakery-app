@@ -21,8 +21,8 @@ const Sidebar = () => {
 
     return ( 
 
-        <div className={`${open ? "w-72" : "w-20" } pt-8 h-screen bg-gray-200 duration-300 relative md:block`}>
-                <span className={`absolute cursor-pointer p-3 rounded-full bg-green-500 top-9 rounded-full -right-5 text-gray-100 text-semibold hover:bg-green-900`}
+        <div className={`${open ? "w-72" : "w-20" } pt-8 h-screen bg-gray-200 duration-300 hidden relative md:block`}>
+                <span className={`absolute cursor-pointer p-3 rounded-full bg-black top-9 rounded-full -right-5 text-gray-100 text-semibold hover:bg-gray-900`}
                       onClick={()=>{setOpen(!open)}}  
                     >
                     <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class={`w-6 h-6  ${!open && "rotate-180"}`}>
@@ -36,9 +36,9 @@ const Sidebar = () => {
                 </div>
                 {<ul className="pt-6">
                     {menus.map((menu)=>(
-                        <li key={menu.id} onClick={clicked} className={`text-gray-700 text-xl flex items-center gap-x-4 cursor-pointer p-4 hover:bg-green-200`}>
+                        <li key={menu.id} onClick={clicked} className={`text-gray-700 text-md flex items-center gap-x-4 cursor-pointer px-12 py-2 hover:bg-white`}>
                             {<img className="w-6" src={require(`../assets/${menu.src}.png`)} alt="" />}
-                            <span className={`${!open && "hidden"} origin-left duration-200`}>{menu.title}</span>   
+                            <span className={`${!open && "hidden"} origin-left duration-200 text-gray-500`}>{menu.title}</span>   
                         </li>
                     ))}
                 </ul>}

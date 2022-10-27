@@ -2,13 +2,15 @@ import React, {useState, useEffect} from "react";
 import Table from "../components/Table";
 import Tablegrid from "../components/Tablegrid"
 import useFetch from "../useFetch";
+import UserDashboard from "../components/UserDashboard";
+import ProgressBar from "../components/ProgressBar";
 
-const NewTemplate = () => {
+const HomePage = () => {
 
     const {result, isPending, error} = useFetch('http://localhost:8002/tasks')
 
     return (  
-        <main className="flex text-2xl flex-1 h-screen text-gray-700">
+        <main className="flex flex-1 h-screen text-gray-700">
             <div className="basis-3/4 bg-gray-100 flex flex-col grow">
                 <div className="flex-1 grid md:grid-cols-2 md:justify-evenly bg-gray-100">
                     <div className="bg-gray-200 basis-3/12 md:m-2 m-2 rounded shadow-md flex p-2">
@@ -49,7 +51,7 @@ const NewTemplate = () => {
 
                     <div className="flex justify-evenly bg-gray-200 basis-3/12 md:m-2 m-2 rounded shadow-md text-xs text-center p-2">
                         <div className="m-2 p-2 items-center flex-col">
-                            <div className="flex justify-center">
+                            <div className="flex justify-center ">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m0 0l6.75-6.75M12 19.5l-6.75-6.75" />
                                 </svg>
@@ -66,7 +68,7 @@ const NewTemplate = () => {
                             <div className="border-b border-green-500 py-2">Loafs dispatched</div>
                             <div className="py-2">7,000 loafs</div>
                         </div>
-                            <span className="self-center">
+                            <span className="self-center bg-gray-700 text-white rounded-md p-1 hover:bg-gray-800">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                                 </svg>
@@ -74,42 +76,22 @@ const NewTemplate = () => {
                     </div>
                 </div>
                 <div className="flex-1 flex bg-gray-100 m-2 shadow-md w-full rounded">
-                    {isPending && <div className="text-sm text-yellow-800">Loading...</div>}
+                    {!result && error && <div>Tasks information could not be fetched</div>}
+                    {isPending && <div className="text-sm text-gray-800">Loading...</div>}
                     {result &&  <Table  tasks = {result} />}
-                    <Tablegrid></Tablegrid>            
+                    {result && <Tablegrid tasks={result} />}            
                 </div>
             </div>
             <div className="basis-1/4 bg-gray-100 flex flex-col align-evenly md:block hidden h-screen">
-                <div className="h-1/3 flex-1 flex flex-col bg-gray-200 m-2 border-2 text-sm rounded shadow items-center">
-                    <img className="w-3/12 m-2 object-cover" src={require('../assets/IMG_20220218_180539.jpg')} alt="" />
-                    <div className="mt-2">
-                        <span>@karenJohnson</span>
-                    </div>
-                </div>
-                <div className="h-1/3 flex-1 flex flex-col m-2 bg-gray-200 text-sm rounded shadow">
+                <UserDashboard />
+                <div className="flex-1 flex flex-col m-2 bg-gray-200 text-sm rounded shadow">
                    
                 </div>
-                <div className="h-1/3 flex-1 flex flex-col justify-around p-2 m-2 bg-gray-300 rounded shadow">
-                    <div className="flex flex-col">
-                        <h4 className="text-sm">Sales target</h4>
-                        <input min={5} max={20} className="w-full" type="range" name="" id="" />
-                    </div>
-
-                    <div className="flex flex-col">
-                        <h4 className="text-sm">Production target</h4>
-                        <input type="range" name="" id="" />
-                    </div>
-
-                    <div className="flex flex-col">
-                        <h4 className="text-sm">personal task completed</h4>
-                        <input type="range" name="" id="" />
-                    </div>
-                    
-                </div>
+                <ProgressBar />
             </div>
             
         </main>
      );
 };
  
-export default NewTemplate;
+export default HomePage;
