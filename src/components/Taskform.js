@@ -39,7 +39,7 @@ const Taskform = () => {
     }
 
     return ( 
-        <form className="w-9/12 text-gray-700 font-nunito" onSubmit={handleSubmit}>
+        <form className="text-gray-700 font-nunito p-3" onSubmit={handleSubmit}>
             <h1 className="text-2xl font-bold mb-12">Create A New Task</h1>
             <div>{error && <div>{error.message}</div>}</div>
             <div className="flex justify-evenly mb-3 items-center">
@@ -50,7 +50,7 @@ const Taskform = () => {
                 />
             </div>
 
-            <div className="flex justify-evenly mb-3 items-center">
+            <div className="flex justify-evenly mb-3 items-center p-2">
                 <label className="w-3/12">Task Description:</label>
                 <input type="text" className="w-9/12 border-none bg-gray-100 rounded" 
                         onChange={(e)=>( setTaskDescription(e.target.value))}

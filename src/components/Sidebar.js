@@ -42,6 +42,15 @@ const Sidebar = () => {
                         </li>
                     ))}
                 </ul>}
+                <div>
+                    <span className={`absolute cursor-pointer p-3 rounded-full md:hidden bg-black rounded-full text-gray-100 text-semibold hover:bg-gray-900`}
+                            onClick={()=>{setOpen(!open)}}  
+                        >
+                        <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class={`w-6 h-6  ${!open && "rotate-180"}`}>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M18.75 19.5l-7.5-7.5 7.5-7.5m-6 15L5.25 12l7.5-7.5" />
+                        </svg>
+                    </span>
+                </div>
                 {modalOn && <Modal setModalOn = {setModalOn} />}
             </div>
 

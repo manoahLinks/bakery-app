@@ -7,6 +7,7 @@ import ProgressBar from "../components/ProgressBar";
 import AlertBox from "../components/AlertBox";
 
 
+
 const HomePage = () => {
 
     const {result, isPending, error} = useFetch('http://localhost:8002/tasks')
@@ -75,7 +76,7 @@ const HomePage = () => {
                     </div>
                 </div>
             </div>
-            <div className="grid grid-cols-1 align-evenly md:w-3/12 overflow-scroll">
+            <div className="grid grid-cols-1 align-evenly md:w-3/12 md:block hidden overflow-scroll">
                 <UserDashboard />
                 <div className="flex border-2 border-zinc-200  flex-col m-5 bg-white text-sm rounded shadow-lg text-center">
                    <h1 className="p-2 text-white">Top priority Tasks</h1>
@@ -89,7 +90,6 @@ const HomePage = () => {
                 </div>
                 <ProgressBar />
             </div>
-            
         </main>
      );
 };
