@@ -21,7 +21,7 @@ const Sidebar = () => {
 
     return ( 
 
-        <div className={`${open ? "w-72" : "w-20" } pt-8 h-screen bg-gray-200 duration-300 hidden relative md:block`}>
+        <div className={`${open ? "w-72" : "w-20" } pt-8 h-screen bg-white duration-300 hidden relative md:block`}>
                 <span className={`absolute cursor-pointer p-3 rounded-full bg-black top-9 rounded-full -right-5 text-gray-100 text-semibold hover:bg-gray-900`}
                       onClick={()=>{setOpen(!open)}}  
                     >
@@ -36,7 +36,7 @@ const Sidebar = () => {
                 </div>
                 {<ul className="pt-6">
                     {menus.map((menu)=>(
-                        <li key={menu.id} onClick={clicked} className={`text-gray-700 text-md flex items-center gap-x-4 cursor-pointer px-12 py-2 hover:bg-white`}>
+                        <li key={menu.id} onClick={clicked} className={`text-gray-700 text-md flex items-center gap-x-4 cursor-pointer px-12 py-2 hover:bg-gray-200`}>
                             {<img className="w-6" src={require(`../assets/${menu.src}.png`)} alt="" />}
                             <span className={`${!open && "hidden"} origin-left duration-200 text-gray-500`}>{menu.title}</span>   
                         </li>

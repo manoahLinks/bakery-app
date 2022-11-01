@@ -8,11 +8,11 @@ const Tablegrid = ({tasks}) => {
                     <div>
                         <div className="flex items-center space-x-2 text-sm">
                             <div>
-                                <a href="#" className="text-blue-500 font-bold hover:underline">{task.id}</a>
+                                <a href="#" className="text-blue-500 font-bold hover:underline">task id : {task.id}</a>
                             </div>
-                            <div className="text-gray-500">{task.dueDate}</div>
+                            <div className="text-gray-500">Due-date: {task.dueDate}</div>
                             <div>
-                                <span className="p-1.5 text-sm font-medium tracking-wider text-yellow-800 bg-yellow-200 rounded bg-opacity-50">{task.status}</span> 
+                                <span className="p-1.5 text-sm font-medium tracking-wider text-yellow-800 bg-yellow-200 rounded bg-opacity-50">task_status: {task.status}</span> 
                             </div>
                         </div>
                         <div className="text-sm text-gray-700">{task.taskName}</div>

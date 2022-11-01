@@ -1,6 +1,6 @@
 const UserDashboard = () => {
     return ( 
-        <div className="flex-1 flex flex-col bg-gray-200 p-5 border-2 text-sm rounded shadow">
+        <div className="flex flex-col bg-white text-sm rounded shadow-md">
             <img className="w-3/12 object-cover self-center" src={require('../assets/IMG_20220218_180539.jpg')} alt="" />
             <div className="mt-2 self-center mb-2">
                 <span>@karenJohnson</span>
