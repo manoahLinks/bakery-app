@@ -14,7 +14,7 @@ const Modal = ({setModalOn, setChoice}) => {
     }
 
     return ( 
-        <div className="bg-zinc-200 opacity-full fixed inset-0 z-50 flex flex-col justify-center items-center">
+        <div className="bg-zinc-50 bg-opacity-90 fixed inset-0 z-50 flex flex-col justify-center items-center">
                 
             <div className="flex flex-col md:w-9/12">
                 <div className="flex self-end">
@@ -27,7 +27,7 @@ const Modal = ({setModalOn, setChoice}) => {
                 
                 <div className="flex flex-col md:flex-row w-full">
                     
-                    <div className="bg-gray-300 flex-1 basis-3/4 flex items-center justify-center p-6">
+                    <div className="bg-zinc-200 flex-1 basis-3/4 flex items-center justify-center p-6">
                         <Taskform></Taskform>
                     </div>
                     <div className="bg-white flex-1 basis-1/4 px-2 py-2">

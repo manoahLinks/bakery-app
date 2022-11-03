@@ -1,23 +1,31 @@
+import { useState } from "react";
 
 const Tablegrid = ({tasks}) => {
 
     return ( 
-        <div className="grid grid-cols-1 gap-3 md:hidden w-full">
-            <div className="bg-white space-y-3 rounded-lg shadow p-4">
+        <div className="grid grid-cols-1 md:hidden w-full">
+            <div className="bg-white space-y-2 p-4">
                 {tasks.map((task)=>(
-                    <div>
-                        <div className="flex items-center space-x-2 text-sm">
-                            <div>
-                                <a href="#" className="text-blue-500 font-bold hover:underline">task id : {task.id}</a>
+                    <div className="shadow-md flex flex-col rounded-md">
+                       <div className="bg-gray-100 text-gray-700 p-3 flex justify-between" >
+                            <h4> {task.id}</h4>
+                            <h2 className="">{task.taskName || "Nil"}</h2>
+                            <h2 className="bg-green-500 rounded-lg px-2">{task.priority || "Nil"}</h2>
+                       </div>
+                       <div className="border border-1 hidden border-white p-2 flex justify-between">
+                            <div className="text-gray-500">
+                                <h4>Due Date</h4>
+                                <h4>Due Time</h4>
+                                <h4>Task Participants</h4>
+                                <h4>Task Progress</h4>
                             </div>
-                            <div className="text-gray-500">Due-date: {task.dueDate}</div>
                             <div>
-                                <span className="p-1.5 text-sm font-medium tracking-wider text-yellow-800 bg-yellow-200 rounded bg-opacity-50">task_status: {task.status}</span> 
+                                <h4>{task.dueDate || 'Nil' }</h4>
+                                <h4>{task.dueTime || "Nil"}</h4>
+                                <h4>{task.participants || "Nil"}</h4>
+                                <h4>87%</h4>
                             </div>
-                        </div>
-                        <div className="text-sm text-gray-700">{task.taskName}</div>
-                        <div className="text-sm text-gray-700">{task.priority}</div>
-                        <div className="text-sm text-yellow-700">{task.participants}</div>
+                       </div>
                     </div>    
                 ))}
                 

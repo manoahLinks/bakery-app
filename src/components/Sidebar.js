@@ -21,7 +21,7 @@ const Sidebar = () => {
 
     return ( 
 
-        <div className={`${open ? "w-72" : "w-20" } pt-8 h-screen bg-white duration-300 hidden relative md:block`}>
+        <div className={`${open ? "w-60" : "w-20" } pt-8 h-screen fixed bg-zinc-300 duration-300 hidden relative md:block`}>
                 <span className={`absolute cursor-pointer p-3 rounded-full bg-black top-9 rounded-full -right-5 text-gray-100 text-semibold hover:bg-gray-900`}
                       onClick={()=>{setOpen(!open)}}  
                     >
