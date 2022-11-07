@@ -12,10 +12,10 @@ const HomePage = () => {
     const {result, isPending, error} = useFetch('http://localhost:8002/tasks')
 
     return (  
-        <main className="flex flex-1 h-screen text-gray-700">
-            <div className="basis-3/4 flex flex-col grow">
+        <main className="flex md:flex-row flex-col flex-1 h-screen text-gray-700 relative">
+            <div className="grid grid-cols-1 grow h-screen overflow-scroll md:w-9/12">
                 <AlertBox />
-                <div className="flex-1 grid md:grid-cols-2 md:justify-evenly">
+                <div className="flex-1 grid md:grid-cols-2 grid-cols-1 md:justify-evenly">
                     <div className="bg-white basis-3/12 m-2 rounded shadow-lg flex p-5">
                         <div className="basis-3/4">
                             {<img className="w-11/12" src={require(`../assets/salesman-indicating-sales-growth.png`)} alt="" />}
@@ -67,18 +67,18 @@ const HomePage = () => {
                             <div className="py-2 text-xl font-semibold">N 650,000</div>
                         </div>
                     </div>
-                </div>
-                <div className="flex-1 flex bg-white w-full">
-                    {!result && error && <div>Tasks information could not be fetched</div>}
-                    {isPending && <div className="text-sm text-gray-800">Loading...</div>}
-                    {result &&  <Table  tasks = {result} />}
-                    {result && <Tablegrid tasks={result} />}            
+                    <div className="md:col-span-2 grid grid-cols-1">
+                        {!result && error && <div>Tasks information could not be fetched</div>}
+                        {isPending && <div className="text-sm text-gray-800">Loading...</div>}
+                        {result &&  <Table  tasks = {result} />}
+                        {result && <Tablegrid tasks={result} />}            
+                    </div>
                 </div>
             </div>
-            <div className="basis-1/4 bg-zinc-100 grid grid-cols-1 align-evenly md:block hidden h-screen">
+            <div className="grid grid-cols-1 align-evenly md:w-3/12 overflow-scroll">
                 <UserDashboard />
-                <div className="flex flex-col m-5 bg-white text-sm rounded shadow-lg text-center">
-                   <h1 className="bg-zinc-400 p-2 text-white">Top priority Tasks</h1>
+                <div className="flex border-2 border-zinc-200  flex-col m-5 bg-white text-sm rounded shadow-lg text-center">
+                   <h1 className="p-2 text-white">Top priority Tasks</h1>
                    <div className="p-5">
                         <img src="" alt="" />
                         <div>

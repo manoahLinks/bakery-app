@@ -7,7 +7,7 @@ const ProgressBar = () => {
                     <h4 className="text-xs">Sales target</h4>
                     <p className="text-sm text-semibold">90%</p>
                 </div>
-                <input min={0} max={100} step={10} value={90} className="appearance-none h-3 rounded-full bg-sky-500" type="range" name="" />
+                <input min={0} max={100} step={10} value={90} className="appearance-none h-3 bg-sky-500" type="range" name="" />
             </div>
 
             <div className="flex flex-col p-2.5">
@@ -15,7 +15,7 @@ const ProgressBar = () => {
                     <h4 className="text-xs">Production target</h4>
                     <p className="text-sm text-semibold">72%</p>
                 </div>
-                <input min={0} max={100} step={10} value={72} className="appearance-none h-3 rounded-full bg-sky-500" type="range" name="" id="" />
+                <input min={0} max={100} step={10} value={72} className="appearance-none h-3 bg-sky-500" type="range" name="" id="" />
             </div>
 
             <div className="flex flex-col p-2.5">

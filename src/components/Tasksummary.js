@@ -8,7 +8,7 @@ const Tasksummary = ({users}) => {
                     <img className="h-12 w-12 object-cover rounded-full" src={require('../assets/IMG_20220218_180539.jpg')} alt="" />
                     <a className='flex flex-col items-center' href="">
                         <span className='text-semibold text-xs text-gray-600'>{user.email}</span>
-                        <span className='text-red-500 text-xs block'>{user.department}</span>
+                        <span className='text-gray-400 text-xs block'>{user.department}</span>
                     </a>
                     <input className='' type="checkbox" name="" id="" />
                 </div>

@@ -74,28 +74,28 @@ const Taskform = () => {
                 />
             </div>
             
-            <div className="bg-white p-5 flex justify-between rounded items-center ">
+            <div className="bg-white px-5 py-2.5 flex justify-between rounded items-center ">
                 <span>Priority</span>
                 <div className="space-x-2 flex">
-                    <span className="bg-green-200 p-3 rounded space-x-2">
+                    <span className="border text-green-500 border-green-500 px-3 py-2 rounded-full space-x-2">
                         <label>Low</label>
-                        <input type="radio" />
+                        <input type="radio" className="border-green-500" />
                     </span>
 
-                    <span className="bg-yellow-200 p-3 rounded space-x-2">
+                    <span className="border text-yellow-500 border-yellow-500 px-3 py-2 rounded-full space-x-2">
                         <label>Medium</label>
-                        <input type="radio" />
+                        <input type="radio" className="border-yellow-500" />
                     </span>
 
-                    <span className="bg-red-200 p-3 rounded space-x-2">
+                    <span className="border text-red-500 border-red-500 px-3 py-2 rounded-full space-x-2">
                         <label>High</label>
-                        <input type="radio" />
+                        <input type="radio" className="border-red-500" />
                     </span>
                     
                 </div>
             </div>
             <div className="mt-5">
-                <button className="border border-green-500 px-6 py-2 text-green-500 font-semibold shadow bg-white">Create Task</button>
+                <button className="border border-zinc-500 rounded-full text-zinc-500 hover:bg-zinc-500 hover:text-white shadow px-3 py-2">Create Task</button>
             </div>
         </form>
      );

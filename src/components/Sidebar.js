@@ -34,9 +34,9 @@ const Sidebar = () => {
                     <img src={require(`../assets/dashboard-apps.png`)} className={`cursor-pointer duration-300`} />
                     <h1 className={`text-gray-700 origin-left font-medium text-xl duration-300 text-bold ${!open && "scale-0"}`}>BakeryName</h1>
                 </div>
-                {<ul className="pt-6">
+                {<ul className="pt-4">
                     {menus.map((menu)=>(
-                        <li key={menu.id} onClick={clicked} className={`text-gray-700 text-md flex items-center gap-x-4 cursor-pointer px-12 py-2 hover:bg-gray-200`}>
+                        <li key={menu.id} onClick={clicked} className={`text-gray-700 text-md flex items-center gap-x-4 cursor-pointer  px-12 py-2 m-2 rounded-full hover:shadow-md hover:bg-white`}>
                             {<img className="w-6" src={require(`../assets/${menu.src}.png`)} alt="" />}
                             <span className={`${!open && "hidden"} origin-left duration-200 text-gray-500`}>{menu.title}</span>   
                         </li>

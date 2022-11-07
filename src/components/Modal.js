@@ -16,7 +16,7 @@ const Modal = ({setModalOn, setChoice}) => {
     return ( 
         <div className="bg-zinc-50 bg-opacity-90 fixed inset-0 z-50 flex flex-col justify-center items-center">
                 
-            <div className="flex flex-col md:w-9/12">
+            <div className="flex flex-col md:w-9/12 border-2 rounded p-2">
                 <div className="flex self-end">
                     <span className="text-gray-800" onClick={handleCancelClick}>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
