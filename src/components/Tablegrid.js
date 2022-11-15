@@ -4,15 +4,15 @@ const Tablegrid = ({tasks}) => {
 
     return ( 
         <div className="grid grid-cols-1 md:hidden w-full">
-            <div className="bg-white space-y-2 p-4">
+            <div className=" space-y-2 p-4">
                 {tasks.map((task)=>(
-                    <div className="shadow-md flex flex-col rounded-md">
+                    <div className="shadow-lg flex flex-col rounded-md">
                        <div className="bg-gray-100 text-gray-700 p-3 flex justify-between" >
                             <h4> {task.id}</h4>
                             <h2 className="">{task.taskName || "Nil"}</h2>
                             <h2 className="bg-green-500 rounded-lg px-2">{task.priority || "Nil"}</h2>
                        </div>
-                       <div className="border border-1 hidden border-white p-2 flex justify-between">
+                       <div className="border hidden border-white p-2 flex rounded justify-between ">
                             <div className="text-gray-500">
                                 <h4>Due Date</h4>
                                 <h4>Due Time</h4>

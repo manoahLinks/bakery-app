@@ -1,4 +1,4 @@
-import Taskform from "./Taskform"
+import Inviteform from "./Inviteform"
 import Tasksummary from "./Tasksummary"
 import useFetch from "../useFetch"
 
@@ -28,7 +28,7 @@ const Modal = ({setModalOn, setChoice}) => {
                 <div className="flex flex-col md:flex-row w-full">
                     
                     <div className="bg-zinc-200 flex-1 basis-3/4 flex items-center justify-center p-6">
-                        <Taskform></Taskform>
+                        <Inviteform></Inviteform>
                     </div>
                     <div className="bg-white flex-1 basis-1/4 px-2 py-2">
                         {isPending && <div>Loading...</div>}

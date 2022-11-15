@@ -1,6 +1,6 @@
 const ProgressBar = () => {
     return ( 
-        <div className="flex flex-col justify-around m-5  bg-white rounded shadow-lg">
+        <div className="flex flex-col justify-around m-5 bg-white rounded shadow-lg">
             <div className="text-sm bg-zinc-300 text-center p-2">Monthly Progress</div>
             <div className="flex flex-col p-2.5">
                 <div className="flex justify-between">

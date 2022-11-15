@@ -77,17 +77,17 @@ const Taskform = () => {
             <div className="bg-white px-5 py-2.5 flex justify-between rounded items-center ">
                 <span>Priority</span>
                 <div className="space-x-2 flex">
-                    <span className="border text-green-500 border-green-500 px-3 py-2 rounded-full space-x-2">
+                    <span className="border text-green-500 border-green-500 p-1 rounded-md space-x-2">
                         <label>Low</label>
                         <input type="radio" className="border-green-500" />
                     </span>
 
-                    <span className="border text-yellow-500 border-yellow-500 px-3 py-2 rounded-full space-x-2">
+                    <span className="border text-yellow-500 border-yellow-500 p-1 rounded-md space-x-2">
                         <label>Medium</label>
                         <input type="radio" className="border-yellow-500" />
                     </span>
 
-                    <span className="border text-red-500 border-red-500 px-3 py-2 rounded-full space-x-2">
+                    <span className="border text-red-500 border-red-500 p-1 rounded-md space-x-2">
                         <label>High</label>
                         <input type="radio" className="border-red-500" />
                     </span>
