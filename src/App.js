@@ -11,7 +11,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-          <div className='relative grid grid-cols-1 w-full h-screen md:overflow-hidden'>
+          <div className='relative grid grid-cols-1 text-xs w-full h-screen md:overflow-hidden'>
             <NavBar />
             <div className="relative flex flex-row font-nunito">
               <Sidebar />
